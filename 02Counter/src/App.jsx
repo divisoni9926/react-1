@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
-  let [Counter, setCounter] = useState(15)
+  const [Counter, setCounter] = useState(15)
 //setCounter function hai jo ki responsible hai "counter" ko update krne me
 
 
@@ -17,6 +17,12 @@ function App() {
     console.log("clicked " , Counter);
     //Counter = Counter + 1;
     setCounter(Counter + 1);
+
+    //setCounter(prevCounter => prevCounter + 1)
+    //setCounter(prevCounter => prevCounter + 1)
+    //setCounter(prevCounter => prevCounter + 1)
+    //setCounter(prevCounter => prevCounter + 1)
+   
     // console.log("value added" , Math.random());
 
   } 
@@ -33,12 +39,12 @@ function App() {
 
       <button
       onClick={addValue}
-      >Add value</button>
+      >Add value {Counter}</button>
       <br />
       <br />
       <button
       onClick={removeVlaue} 
-      >Remove value</button>
+      >Remove value{Counter}</button>
     </>
   )
 }
